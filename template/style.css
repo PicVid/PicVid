@@ -1,0 +1,161 @@
+/** Eigenschaften der Installation.
+--------------------------------------------------------------*/
+
+
+.news{
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+    padding-bottom:15px;
+    -webkit-border-radius: 6px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius: 6px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-radius: 6px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0px 0px 6px #C6C6C6;
+    margin-bottom: 20px;
+    background: none repeat scroll 0 0 #F5F5F5;
+    padding:5px;
+    }
+    .news h1{
+        font-size: 3.1em;
+        letter-spacing: -1px;
+        line-height: 100%;
+    }
+
+    .news p{
+        font-size: 1.1em;
+    }
+    .news hr {
+        border-top:1px solid #ddd;
+    }
+#installation {
+	margin:40px 0 0;
+}
+#installation .table td:last-child {
+	text-align:center;
+}
+#installation .navbar-fixed-bottom font {
+	line-height:40px;
+}
+#installation .navbar-fixed-top img {
+	margin:5px 0;
+}
+#installation .button-right {
+	float:right;
+}
+#installation form fieldset .span5 {
+	margin-top:20px;
+}
+#installation form fieldset legend {
+	margin-bottom:0;
+}
+hr {
+	margin:5px 0 15px!important;
+}
+#template {
+	margin:40px 0;
+	padding:15px 0;
+}
+#template .login-form {
+	padding:10px;
+}
+#template .login-form form {
+	margin:0;
+}
+#template .login-form .btn-right {
+	float:right;
+}
+#template-admin {
+	margin:80px 0 40px;
+	padding:15px 0;
+}
+#user-menu .logo {
+	margin:0;
+	padding:0;
+}
+#user-menu .logo img {
+	margin:4px 15px 5px 0;
+}
+#admin-menu {
+	top:40px;
+	z-index:1;
+}
+
+a:hover {
+	text-decoration:none;
+}
+#welcome {
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+/** Formatierungen fuer die Videos.
+------------------------------------------------------ */
+.video-js {
+    margin:5px;
+}
+
+/** Formatierungen fuer das Kalender-Script.
+------------------------------------------------------ */
+#broCalendar select {
+    width:95px;
+}
+
+/** Formatierungen fuer den Fussbereich.
+------------------------------------------------------ */
+#footer .container {
+    line-height:40px;
+}
+
+/** Formatierungen fuer die Slideshow.
+------------------------------------------------------ */
+#section-slideshow img {
+    margin:3px;
+}
+
+/** Formatierungen fuer die Benutzerverwaltung.
+------------------------------------------------------ */
+.list-table tr td, .list-table tr th {
+    padding:0;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+}
+
+/** Upload-Area formatieren.
+------------------------------------------------------ */
+.upload-area {
+    display:block;
+	border:2px dashed #d5d5d5;
+	height:100px!important;
+	margin-bottom:5px;
+	padding:1%;
+	width:98%!important;
+}
+.upload-area:hover {
+	border:2px dashed #888;
+}
+.label-format {
+	display:block;
+	width:26px;
+	margin-bottom:4px;
+}
+
+/** Tabelle fuer die Upload-Informationen formatieren.
+------------------------------------------------------ */
+#upload-information {
+    margin-top:10px;
+}
+#upload-information td {
+    line-height:44px;
+    padding-bottom:0;
+    padding-top:0;
+}
+#upload-information td input {
+    margin-top:6px;
+    width:98%;
+}

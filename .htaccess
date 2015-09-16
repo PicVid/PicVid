@@ -1,0 +1,13 @@
+#Register Globals deaktivieren.
+php_flag display_errors on
+
+#RewriteRules.
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?section=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?section=$1
+
+#Konfiguration schuetzen.
+<files configuration.php>
+Order deny,allow
+deny from all
+</files>
