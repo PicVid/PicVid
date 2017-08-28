@@ -16,7 +16,6 @@ if((file_exists('../configuration.php') === true) && (filesize('../configuration
 }
 
 //Externe Dateien einbinden.
-require_once('../includes/crypt.class.php');
 require_once('../includes/html.class.php');
 require_once('../includes/core.class.php');
 require_once('../includes/database.class.php');
@@ -33,20 +32,17 @@ $absolute_path = str_replace('\installation', '', $PICVID['CORE']->getValue('abs
 //Pruefen ob installiert werden soll.
 if($PICVID['CORE']->getParameter($_REQUEST, 'task', '') === 'install') {
 
-    //Sicherheitschluessel der Verschluesselung in die Encryption-Klasse setzen.
-    $PICVID['ENCRYPTION'] = new Encryption($PICVID['CORE']->getParameter($_POST, 'security_key', 'd2eb967ab561ccdc67ee2d2f8ffc7d32'));
-
     //Kopnfiguration schreiben.
     $PICVID['CORE']->writeConfiguration('absolute_path', $PICVID['CORE']->getParameter($_POST, 'absolute_path'));
-    $PICVID['CORE']->writeConfiguration('db_name', $PICVID['ENCRYPTION']->encrypt($PICVID['CORE']->getParameter($_POST, 'database_name')));
-    $PICVID['CORE']->writeConfiguration('db_password', $PICVID['ENCRYPTION']->encrypt($PICVID['CORE']->getParameter($_POST, 'database_password')));
-    $PICVID['CORE']->writeConfiguration('db_username', $PICVID['ENCRYPTION']->encrypt($PICVID['CORE']->getParameter($_POST, 'database_username')));
-    $PICVID['CORE']->writeConfiguration('db_prefix', $PICVID['ENCRYPTION']->encrypt($PICVID['CORE']->getParameter($_POST, 'database_prefix')));
+    $PICVID['CORE']->writeConfiguration('db_name', $PICVID['CORE']->getParameter($_POST, 'database_name'));
+    $PICVID['CORE']->writeConfiguration('db_password', $PICVID['CORE']->getParameter($_POST, 'database_password'));
+    $PICVID['CORE']->writeConfiguration('db_username', $PICVID['CORE']->getParameter($_POST, 'database_username'));
+    $PICVID['CORE']->writeConfiguration('db_prefix', $PICVID['CORE']->getParameter($_POST, 'database_prefix'));
     $PICVID['CORE']->writeConfiguration('upload_path', $PICVID['CORE']->getParameter($_POST, 'upload_path'));
     $PICVID['CORE']->writeConfiguration('site_url', $PICVID['CORE']->getParameter($_POST, 'site_url'));
-    $PICVID['CORE']->writeConfiguration('db_hostname', $PICVID['ENCRYPTION']->encrypt($PICVID['CORE']->getParameter($_POST, 'database_hostname')));
-    $PICVID['CORE']->writeConfiguration('db_driver', $PICVID['ENCRYPTION']->encrypt($PICVID['CORE']->getParameter($_POST, 'database_driver')));
-    $PICVID['CORE']->writeConfiguration('db_port', $PICVID['ENCRYPTION']->encrypt($PICVID['CORE']->getParameter($_POST, 'database_port')));
+    $PICVID['CORE']->writeConfiguration('db_hostname', $PICVID['CORE']->getParameter($_POST, 'database_hostname'));
+    $PICVID['CORE']->writeConfiguration('db_driver', $PICVID['CORE']->getParameter($_POST, 'database_driver'));
+    $PICVID['CORE']->writeConfiguration('db_port', $PICVID['CORE']->getParameter($_POST, 'database_port'));
     $PICVID['CORE']->writeConfiguration('security_key', $PICVID['CORE']->getParameter($_POST, 'security_key', 'd2eb967ab561ccdc67ee2d2f8ffc7d32'));
 
     //Kern von PicVid neu laden.

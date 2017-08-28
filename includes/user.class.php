@@ -303,7 +303,7 @@ class User {
         global $PICVID;
 
         //Activation-Code setzen.
-        $this->_activation = md5($PICVID['ENCRYPTION']->encrypt($this->_username.$this->_email));
+        $this->_activation = md5($this->_username.$this->_email);
 
         //Informationen der E-Mail setzen.
         $subject = 'Activate your Account for PicVid';

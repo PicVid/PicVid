@@ -3,11 +3,9 @@
 require_once('../includes/core.class.php');
 require_once('../includes/database.class.php');
 require_once('../includes/section.class.php');
-require_once('../includes/crypt.class.php');
 
 //Instanzen erzeugen.
 $PICVID['CORE'] = new Core();
-$PICVID['ENCRYPTION'] = new Encryption($PICVID['CORE']->getValue('security_key'));
 $PICVID['DATABASE'] = $PICVID['CORE']->getDatabaseObject();
 $PICVID['SECTION'] = new Section($PICVID['DATABASE']);
 

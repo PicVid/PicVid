@@ -4,7 +4,6 @@ error_reporting(E_ALL);
 
 //Einbinden der benoetigten Klassen.
 require_once(dirname(__FILE__).'/includes/core.class.php');
-require_once(dirname(__FILE__).'/includes/crypt.class.php');
 require_once(dirname(__FILE__).'/includes/cito.class.php');
 require_once(dirname(__FILE__).'/includes/database.class.php');
 require_once(dirname(__FILE__).'/includes/html.class.php');
@@ -15,7 +14,6 @@ require_once(dirname(__FILE__).'/includes/section.class.php');
 //Erzeugen eines Arrays mit allen Objekten von PicVid.
 $PICVID = array();
 $PICVID['CORE'] = new Core();
-$PICVID['ENCRYPTION'] = new Encryption($PICVID['CORE']->getValue('security_key'));
 $PICVID['DATABASE'] = $PICVID['CORE']->getDatabaseObject();
 $PICVID['MEDIA'] = new Media($PICVID['DATABASE']);
 $PICVID['SECTION'] = new Section($PICVID['DATABASE']);

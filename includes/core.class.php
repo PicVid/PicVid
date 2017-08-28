@@ -115,7 +115,7 @@ class Core {
             if(in_array($value, array('_db_hostname', '_db_name', '_db_password', '_db_prefix', '_db_username', '_db_port', '_db_driver')) === true) {
 
                 //Zurueckgeben des entschluesselten Wertes.
-                return $PICVID['ENCRYPTION']->decrypt($this->$value);
+                return $this->$value;
             }
 
             //Zurueckgeben der Eigenschaft (unverschluesselt).
